@@ -8,7 +8,7 @@ interface OrderData {
 	customerName: string;
 	customerEmail: string;
 	amount: number;
-	status: string;
+	status: "Success" | "Pending" | "Failed";
 	category: string;
 	createdAt: string;
 }
@@ -170,7 +170,7 @@ function Orders() {
 						{/*make dynamic later*/}
 						<button
 							onClick={() => {
-								if (page < orderApiData?.totalPages)
+								if (orderApiData && page < orderApiData.totalPages)
 									setPage((prev) => prev + 1);
 							}}
 							className="cursor-pointer"
