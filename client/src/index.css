@@ -1,0 +1,15 @@
+@import "tailwindcss";
+*{
+   user-select: none;
+}
+
+html,body{
+   font-family: 'Inter', sans-serif;
+}
+
+tbody > tr:nth-of-type(odd){
+   background-color: rgb(216, 253, 255);
+}
+th, td{
+   @apply py-2
+}
